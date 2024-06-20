@@ -1,13 +1,14 @@
 import React from 'react';
-import { logo, bgPatternIntro } from '../images';
+// import { logo, bgPatternIntro } from '../images';
+import logo from '../images/logo.svg';
 import './Header.scss';
 
 const Header: React.FC = () => {
   return (
     <header>
-      <div className="header-bg">
+      {/* <div className="header-bg">
         <img src={bgPatternIntro} alt="Background Pattern" className="header-bg-pattern" />
-      </div>
+      </div> */}
       <nav>
         <div className="logo">
           <img src={logo} alt="Blogr Logo" />
