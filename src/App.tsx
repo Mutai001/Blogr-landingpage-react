@@ -1,8 +1,12 @@
 import React from 'react';
-import Header from './components/header';
-import Body from './components/body';
+import Header from './components/Header';
+import Body from './components/Body';
 import Footer from './components/Footer';
-import './styles/main.scss';
+import './index.scss';
+import './components/Header.scss';
+import './components/Body.scss';
+import './components/Section.scss';
+import './components/Body.scss';
 
 const App: React.FC = () => {
   return (

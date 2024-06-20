@@ -1,23 +1,69 @@
-// src/styles/Body.scss
 main {
     padding: 20px;
-    .buttons {
+    section {
+        padding: 40px 0;
+        border-bottom: 1px solid #e8e8e8;
         display: flex;
-        gap: 10px;
-        margin: 20px 0;
-        button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            &:first-of-type {
-                background-color: #ff7a59;
-                color: white;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &:last-child {
+            border-bottom: none;
+        }
+        .section-content {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .desktop-image {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+        }
+        .mobile-image {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+        }
+        @media (min-width: 768px) {
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-start;
+            .section-content {
+                margin-bottom: 0;
+                margin-right: 20px;
             }
-            &:last-of-type {
-                background-color: transparent;
-                border: 1px solid #ff7a59;
-                color: #ff7a59;
+            .desktop-image {
+                display: block;
+                max-width: 600px;
+            }
+            .mobile-image {
+                display: none;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                .section-content {
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+        @media (min-width: 1200px) {
+            padding: 60px 0;
+            h2 {
+                font-size: 36px;
+            }
+            p {
+                font-size: 18px;
             }
         }
     }

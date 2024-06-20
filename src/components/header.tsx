@@ -1,13 +1,16 @@
-// src/components/Header.tsx
 import React from 'react';
+import { logo, bgPatternIntro } from '../images';
 import './Header.scss';
 
 const Header: React.FC = () => {
   return (
     <header>
+      <div className="header-bg">
+        <img src={bgPatternIntro} alt="Background Pattern" className="header-bg-pattern" />
+      </div>
       <nav>
         <div className="logo">
-          <img src="/images/logo.svg" alt="Blogr Logo" />
+          <img src={logo} alt="Blogr Logo" />
         </div>
         <ul>
           <li><a href="#product">Product</a></li>
@@ -19,6 +22,14 @@ const Header: React.FC = () => {
           <a href="#signup" className="signup">Sign Up</a>
         </div>
       </nav>
+      <div className="header-content">
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div className="header-buttons">
+          <button>Start for Free</button>
+          <button>Learn More</button>
+        </div>
+      </div>
     </header>
   );
 };
